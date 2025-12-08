@@ -16,7 +16,7 @@ export default async function handler(req, res) {
 
   try {
     const {
-      name,
+      fname,
       phone,
       state,
       pincode,
@@ -36,7 +36,7 @@ export default async function handler(req, res) {
       subject: "New Form Submission",
       html: `
         <h2>New Contact Form Submission from Samatva</h2>
-        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Name:</strong> ${fname}</p>
         <p><strong>Phone:</strong> ${phone}</p>
         <p><strong>State:</strong> ${state}</p>
         <p><strong>Pincode:</strong> ${pincode}</p>
