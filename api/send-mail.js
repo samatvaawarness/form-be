@@ -16,13 +16,9 @@ export default async function handler(req, res) {
 
   try {
     const {
-      firstName,
-      lastName,
+      name,
       phone,
-      email,
-      dob,
-      employmentType,
-      address,
+      state,
       pincode,
     } = req.body;
 
@@ -40,13 +36,9 @@ export default async function handler(req, res) {
       subject: "New Form Submission",
       html: `
         <h2>New Contact Form Submission from Samatva</h2>
-        <p><strong>First Name:</strong> ${firstName}</p>
-        <p><strong>Last Name:</strong> ${lastName}</p>
+        <p><strong>Name:</strong> ${name}</p>
         <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Date of Birth:</strong> ${dob}</p>
-        <p><strong>Employment Type:</strong> ${employmentType}</p>
-        <p><strong>Address:</strong> ${address}</p>
+        <p><strong>State:</strong> ${state}</p>
         <p><strong>Pincode:</strong> ${pincode}</p>
       `,
     };
