@@ -34,6 +34,7 @@ export default async function handler(req, res) {
     const mailOptions = {
       from: "support@samatvaawareness.in",
       to: "support@samatvaawareness.in",
+      cc: "greesegilbertvijay@gmail.com",
       subject: "New Form Submission",
       html: `
         <h2>New Contact Form Submission from Samatva</h2>
