@@ -20,6 +20,7 @@ export default async function handler(req, res) {
       phone,
       state,
       pincode,
+      pan,
     } = req.body;
 
     const transporter = nodemailer.createTransport({
@@ -40,6 +41,7 @@ export default async function handler(req, res) {
         <p><strong>Phone:</strong> ${phone}</p>
         <p><strong>State:</strong> ${state}</p>
         <p><strong>Pincode:</strong> ${pincode}</p>
+        <p><strong>PanCard No:</strong> ${pan}</p>
       `,
     };
 
