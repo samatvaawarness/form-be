@@ -34,14 +34,13 @@ export default async function handler(req, res) {
     const mailOptions = {
       from: "support@samatvaawareness.in",
       to: "support@samatvaawareness.in",
-      cc: "greesegilbertvijay@gmail.com",
       subject: "New Form Submission",
       html: `
         <h2>New Contact Form Submission from Samatva</h2>
         <p><strong>Name:</strong> ${fname}</p>
         <p><strong>Phone:</strong> ${phone}</p>
         <p><strong>State:</strong> ${state}</p>
-        <p><strong>Pincode:</strong> ${pincode}</p>
+        <p><strong>Pincode:</strong> ${pincode}</p>https://form-be.vercel.app/send-mail
         <p><strong>PanCard No:</strong> ${pan}</p>
       `,
     };
