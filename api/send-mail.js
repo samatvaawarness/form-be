@@ -20,7 +20,6 @@ export default async function handler(req, res) {
       phone,
       state,
       pincode,
-      pan,
     } = req.body;
 
     const transporter = nodemailer.createTransport({
@@ -41,7 +40,6 @@ export default async function handler(req, res) {
         <p><strong>Phone:</strong> ${phone}</p>
         <p><strong>State:</strong> ${state}</p>
         <p><strong>Pincode:</strong> ${pincode}</p>
-        <p><strong>PanCard No:</strong> ${pan}</p>
       `,
     };
 
@@ -50,10 +48,6 @@ export default async function handler(req, res) {
     return res.json({ success: true, message: "Email sent successfully!" });
   } catch (error) {
     console.error("Email Error:", error);
-    return res.status(500).json({
-      success: false,
-      message: "Email sending failed",
-      error: error.code || error.message,
-    });
+    return res.status(500).json({ success: false, message: "Email sending failed" });
   }
 }
